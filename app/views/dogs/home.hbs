@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/master.css">
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+  </head>
+  <body>
+    <center>
+    <h1>Dog list</h1>
+  </center>
+  <a href="new"><button type="button" name="button" id="create">Add a new dog!</button></a>
+  <!-- <button type="button" name="button"><a href="delete">Delete</a></button> -->
+    <div id="dogs">
+
+
+
+        {{#each dogs}}
+        <section class="dogCard">
+          <img src="{{picture}}" alt="No Picture Provided" id="dogPictureHome">
+          <p id="dogName">Name:&nbsp;{{name}}</p>
+          <p id="dogAge">Age:&nbsp;{{age}} years old</p>
+
+
+
+          <!-- <p>{{id}}</p> -->
+          <a href="{{id}}"><button type="button" name="button" id="complete-info">complete info</button></a>
+        </section>
+        {{/each}}
+    </div>
+
+
+  </body>
+</html>
