@@ -11,6 +11,7 @@ html {
   width: 300px;
   font-size: 30px;
   text-decoration: none;
+  font-family: helvetica;
 }
 
 
@@ -89,8 +90,50 @@ button {
   width: 100%;
   align-items: middle;
   align-content: center;
+  margin-left: none;
 }
 
 img {
   width: 100px;
+}
+
+#dogPicture {
+  width: 200px;
+}
+
+#cancel {
+  background-color: #f44268;
+  width: 200px;
+  height: 50px;
+  text-decoration: none;
+  font-family: helvetica;
+  font-size: 30px;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+
+.doginfo {
+
+  border-left: solid;
+  border-color: lightblue;
+
+  margin: 0px;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+ #dogPicture {
+   display: inline;
+ }
+
+ #show {
+   background-color: #2196F3;
+ }
+
+
+#dogPicture {
+  width: 500px;
 }
