@@ -128,21 +128,22 @@ app.delete(`/dogs/:id`,(req,res)=>{
   })
 
   app.patch('/dogs/:id', (req, res) => {
-    const id = req.params.id;
+      const id = req.params.id;
+      const body = req.body;
+      console.log(body);
+      Dog.findByIdAndUpdate(id,body)
+        .then(Dog => {
 
-    Dog.findByIdAndUpdate(id, {name:req.params.name,age:req.params.age,description:req.params.description})
-      .then(Dog => {
+          if (!Dog) {
+            res.status(404).send()
+          } else {
+            // res.send(Dog);
+            res.redirect(`/dogs/${id}`);
+          }
 
-        if (!Dog) {
-          res.status(404).send()
-        } else {
-
-          res.render(`./dogs/update.hbs`,{Dog});
-        }
-
-      }).catch(e => {
-        res.status(404).send(e);
-      })
+        }).catch(e => {
+          res.status(404).send(e);
+        })
   })
 
 
@@ -158,13 +159,13 @@ app.get(`/dogs/:id`,(req,res)=>{
       res.status(404).send(e);
     })
 })
-
-
-app.get(`/dogs/update`,(req,res)=>{
-  Dog.find().then((dogs)=>{
-
-    res.render(`./dogs/update`,{dogs})
+app.get(`/dogs/:id/update`,(req,res)=>{
+  Dog.findById(req.params.id).then((dog)=>{
+    res.render(`./dogs/update`,{dog})
   })
+  .catch(e=>{
+      res.status(404).send(e);
+    })
 })
 
 

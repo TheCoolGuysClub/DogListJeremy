@@ -3,7 +3,7 @@ html {
   color: black;
   font-family: 'Patrick Hand', helvetica;
   font-variant: small-caps;
-  margin: 20px;
+  /* margin: 20px; */
 }
 
 #create {
@@ -13,13 +13,7 @@ html {
   text-decoration: none;
 }
 
-.dogCard {
-  border: solid;
-  border-width: 5px;
-  border-color: blue;
-  padding: 10px;
-  width: 40%;
-}
+
 
 
 input {
@@ -32,6 +26,9 @@ input {
 
 #newsubmit {
   background: lightgreen;
+  margin: 5px;
+  width: 200px;
+  font-size: 25px;
 }
 
 .home-button {
@@ -64,11 +61,36 @@ h1 {
   font-size: 60px;
 }
 
-img {
+/* img {
   margin: 20px 0px;
-}
+
+} */
 
 button {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+
+.dogCard {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  margin: 30px;
+}
+
+.dogs-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #2196F3;
+  padding: 10px;
+  width: 100%;
+  align-items: middle;
+  align-content: center;
+}
+
+img {
+  width: 100px;
 }
