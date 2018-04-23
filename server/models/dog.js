@@ -11,6 +11,14 @@ const dogSchema = mongoose.Schema({
   },
   picture: {
     type: String
+  },
+  personality: {
+    type: String,
+    minLength: 1
+  },
+  description: {
+    type: String,
+    minLength: 1
   }
 
 })
