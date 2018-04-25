@@ -14,7 +14,7 @@ const app = express();
 //hbs set up
 app.set('view engine','hbs');
 app.set('views',path.join(__dirname,'../app/views'));
-hbs.registerPartials(path.join(path.join(__dirname,'../app/views/partials')));
+// hbs.registerPartials(path.join(path.join(__dirname,'../app/views/partials')));
 //setup
 const port = process.env.PORT || 3000;
 mongoose.Promise = global.Promise;
@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
   // res.send("GET /");
 })
 
-app.post('/dogs', upload.single('uploadedFile'), (req, res) => {
+app.post('/dogs', upload.single('picture'), (req, res) => {
   console.log(req.body);
   console.log(req.file);
 });
