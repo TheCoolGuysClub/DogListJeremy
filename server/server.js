@@ -6,6 +6,9 @@ const hbs = require(`hbs`);
 const path = require(`path`);
 const _ = require(`lodash`);
 const methodOverride = require(`method-override`);
+const multer = require('multer');
+const upload = multer({dest: './public/images'})
+
 const app = express();
 
 //hbs set up
@@ -26,11 +29,16 @@ mongoose.connect(database)
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride(`_method`));
-app.use(express.static(path.join(__dirname,`../public`)))
+app.use(express.static(path.join(__dirname,`../public`)));
 app.get('/', (req, res) => {
   res.redirect(`/dogs/home`)
   // res.send("GET /");
 })
+
+app.post('/dogs', upload.single('uploadedFile'), (req, res) => {
+  console.log(req.body);
+  console.log(req.file);
+});
 
 //-------------------middle ware---------------------
 

@@ -9,7 +9,7 @@
   </head>
   <body>
     <h1 id="newTitle">ADD A NEW DOG</h1>
-    <form action="/dogs" method="post">
+    <form action="/dogs" method="post" enctype="multipart/form-data">
       <!-- <label for="dogName">Name</label> -->
       <input id="dogName" type="text" name="name" placeholder="Dog's Name">
       <br>
@@ -19,11 +19,10 @@
       <!-- <label for="dogDescription">Description</label> -->
       <input id="dogDescription" type="text" name="description" placeholder="Type Your Dog's Description Here">
       <br>
-      <!-- <label for="dogPicture">PictureUrl</label> -->
-      <input id="dogPicture" type="text" name="picture" placeholder="Paste Your Dog's Picture's URL here">
-      <br>
       <!-- <label for="dogPersonality">Personality Type</label> -->
       <input id="dogPersonality" type="text" name="personality" placeholder="What's your Dog's Personality Like?">
+      <br>
+      <input id="dogPicture" type="file" name="picture">
       <br>
       <input type="submit" value="Create New Dog" id="newsubmit">
     </form>
