@@ -3,30 +3,29 @@
 
   <head>
     <link rel="stylesheet" href="/css/update.css">
-    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
     <meta charset="utf-8">
     <title>New Dog</title>
   </head>
   <body>
 
-    <h1>Update {{dog.name}}'s info</h1>
+    <p id = "intro">Update this DOG!</p>
+
      <form class="" action="/dogs/{{dog.id}}?_method=PATCH" method="post">
-      <label for="dogName">Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <label for="dogName">Name</label>
       <input id="dogName" type="text" name="name" value={{dog.name}} >
       <br>
-      <label for="dogAge">Age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <label for="dogAge">Age</label>
       <input id="dogAge" type="text" name="age" value = {{dog.age}}>
       <br>
-      <label for="dogPicture">Picture's Url </label>
+      <label for="dogPicture">PictureUrl</label>
       <input id="dogPicture" type="text" name="picture" value={{dog.picture}} >
       <br>
-      <label for="dogDescription">Description&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <label for="dogDescription">Description</label>
       <input id="dogDescription" type="text" name="description" value={{dog.description}}>
       <br>
-      <label for="dogPersonality">Personality&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <label for="dogPersonality">Personality</label>
       <input id="dogPersonality" type="text" name="personality" value={{dog.personality}}>
-      <br>
-      <input type="submit" value="Update the Dog" id="submit">
+      <input type="submit" value="Update the Dog">
     </form>
 
   </body>
