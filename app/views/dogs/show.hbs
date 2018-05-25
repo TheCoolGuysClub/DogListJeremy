@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" id="show">
   <head>
     <meta charset="utf-8">
     <title>Show</title>
@@ -7,10 +7,9 @@
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
   </head>
   <body>
-    <a href="home"><button type="button" name="button" class="home-button">Cancel</button>
+    <a href="home"><button type="button" name="button" class="home-button" style="color:  #00004a">Go Home</button></a>
     <!-- <button type="button" name="button"><a href="new">Create</a></button> -->
 
-<<<<<<< HEAD
     <div>
 
         <img id="dogPicture" src="images/{{dog.picture}}" alt="No Picture Provided">
@@ -21,17 +20,9 @@
           <p class="doginfo" id="dogPersonality">Personality: {{dog.personality}}</p>
         </section>
 
-=======
-    <div id="dogs">
-        <img id="dogPicture" src="{{dog.picture}}" alt="No Picture Provided">
-        <p id="dogName">Name: {{dog.name}} </p>
-        <p id="dogAge">{{dog.age}} years old</p>
-        <p id="dogDescription">Description: {{dog.description}}</p>
-        <p id="dogPersonality">Personality: {{dog.personality}}</p>
->>>>>>> parent of 58e7944... done
         <br>
 
-        <button type="button" name="button"><a href="/dogs/{{dog.id}}/update">Update this Dog</a></button>
+        <a href="/dogs/{{dog.id}}/update"><button type="button" name="button">Update this Dog</button></a>
         <form action="/dogs/{{dog.id}}?_method=DELETE" method="post" >
         <button type="submit" name="button" class="del-but">Delete this dog</button>
         </form>
